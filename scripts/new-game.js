@@ -25,7 +25,7 @@ const OLD = {
     name: 'Game Template',
     nameUpper: 'GAME TEMPLATE',
     slug: 'gametemplate',
-    npmName: 'toss-game-launchpad',
+    npmName: 'laika-game-lunchpad',
     display: '게임 템플릿',
 }
 
