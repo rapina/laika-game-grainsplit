@@ -48,6 +48,6 @@ Design and verification records live in `GDD.md`, `DAY.md`, and `ART.md`.
 ## 라이선스 / License
 
 - 코드 / Code: [MIT](LICENSE)
-- 문서와 비브랜드 원본 아트 / Documentation and original non-brand artwork: [CC BY 4.0](CONTENT-LICENSE.md)
-- Laika 및 Sputnik Workshop 브랜드 자산 / Laika and Sputnik Workshop brand assets: 별도 허가 필요 / separate permission required
+- 문서 / Documentation: [CC BY 4.0](CONTENT-LICENSE.md)
+- 프로젝트 아트 / Project artwork: [CC0 1.0](CONTENT-LICENSE.md)
 - 제3자 자료 / Third-party material: 원래 라이선스 유지 / remains under its original license
