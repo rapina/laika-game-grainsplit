@@ -1,0 +1,7 @@
+# Laika maker illustration prompt
+
+Use `laika-base-v1` (attached image) as a strict identity reference. Preserve Laika's pointed ears, narrow white forehead blaze, dark eye patches, white chest and front paws, cream X harness, oxidized-orange connector, small canine proportions, and natural four-legged anatomy.
+
+Inside the same 1950s riveted capsule, show Laika driving one iron splitting wedge into a short round log. The log rests end-on, its sawn end face turned toward the viewer, showing concentric growth rings, radial drying checks, and one knot. Laika is braced on her hind legs with both front paws pressed together on the flat head of the wedge, caught at the instant of the strike, so the wedge reads as being driven in rather than held. The wedge is already bitten into the top of the end face, and a single crack runs down from it along the grain, its lips lined with torn pale fibre and opening on bright cream sapwood. A few chips of wood dust fly off the struck point. Keep the coarse technical-brutalist screen-print texture and the limited black, dirty white, and oxidized-orange palette; the sepia brown of the wood and the cream of the fresh split face sit inside that palette. Blue appears only on Earth through the circular porthole.
+
+One wedge, one log, one crack only. No axe, no maul, no hammer, no second tool, no chopping block, no typography, logo, signature, fake documentary label, extra limb, humanoid hand, glossy 3D rendering, mascot exaggeration, modern UI, or change to Laika's face and harness.

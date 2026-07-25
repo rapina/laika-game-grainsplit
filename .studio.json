@@ -1,0 +1,16 @@
+{
+  "defaultLocales": [
+    "ko",
+    "en"
+  ],
+  "date": "2026-07-19",
+  "slug": "grainsplit",
+  "title": "결 가르기",
+  "publishState": "local-preview",
+  "editorialState": "ready",
+  "studio": "Sputnik Workshop",
+  "maker": "Laika",
+  "laikaBaseId": "laika-base-v1",
+  "laikaBaseSha256": "820e6d43e915c4e9e32ddcd3cc14d0f2537d99f6d8d397bbd40fc416137a6712",
+  "sequence": 13
+}

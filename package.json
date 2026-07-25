@@ -1,0 +1,53 @@
+{
+  "name": "grainsplit",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:web": "tsc -b && vite build",
+    "build:arcade": "cross-env VITE_DISTRIBUTION=arcade tsc -b && cross-env VITE_DISTRIBUTION=arcade vite build && node scripts/build-release.mjs && node scripts/verify-release.mjs",
+    "verify:arcade": "node scripts/verify-release.mjs",
+    "build:debug": "tsc -b && vite build --mode development",
+    "build:cap": "cross-env CAPACITOR_BUILD=true tsc -b && cross-env CAPACITOR_BUILD=true vite build",
+    "build:cap:debug": "cross-env CAPACITOR_BUILD=true tsc -b && cross-env CAPACITOR_BUILD=true vite build --mode development",
+    "preview": "vite preview",
+    "android:build": "npm run build:cap:debug && npx cap sync android && node scripts/android-gradle.js assembleDebug",
+    "android:install": "adb install -r android/app/build/outputs/apk/debug/app-debug.apk",
+    "android:deploy": "npm run android:build && npm run android:install",
+    "android:release": "npm run bump-version && npm run build:cap && npx cap sync android && node scripts/android-gradle.js bundleRelease",
+    "android:release:apk": "npm run bump-version && npm run build:cap && npx cap sync android && node scripts/android-gradle.js assembleRelease",
+    "bump-version": "node scripts/bump-version.js",
+    "toss:dev": "cross-env VITE_PLATFORM=toss npx granite dev",
+    "toss:build": "cross-env VITE_PLATFORM=toss tsc -b && cross-env VITE_PLATFORM=toss npx ait build",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "new-game": "node scripts/new-game.js"
+  },
+  "dependencies": {
+    "@apps-in-toss/web-framework": "^2.3.0",
+    "@capacitor-community/admob": "^8.0.0",
+    "@capacitor/android": "^8.0.2",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/cli": "^8.0.2",
+    "@capacitor/core": "^8.0.2",
+    "html2canvas": "^1.4.1",
+    "i18next": "^26.0.4",
+    "pixi.js": "^8.6.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^10.1.0",
+    "playwright-core": "^1.60.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1",
+    "vitest": "^4.1.10"
+  }
+}

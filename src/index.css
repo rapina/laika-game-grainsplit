@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('/fonts/Galmuri11.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('/fonts/Galmuri11-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Galmuri14';
+    src: url('/fonts/Galmuri14.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #100a06;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Galmuri11', monospace;
+}
+
+/*
+ * The single mount point. The runtime letterboxes its own canvas with a
+ * uniform scale, so this only has to be a correctly sized centering box:
+ * a fixed full-viewport frame, never a box that grows to its content.
+ */
+.game-host {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #100a06;
+}
+
+.game-host canvas {
+    display: block;
+    /* Keyboard users must still see where focus is. */
+    outline-offset: 2px;
+}

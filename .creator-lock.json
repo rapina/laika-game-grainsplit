@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 2,
+  "slug": "grainsplit",
+  "date": "2026-07-19",
+  "studio": {
+    "date": "2026-07-19",
+    "defaultLocales": [
+      "ko",
+      "en"
+    ],
+    "slug": "grainsplit",
+    "title": "결 가르기"
+  },
+  "manifest": {
+    "schemaVersion": 1,
+    "slug": "grainsplit",
+    "appId": "com.sputnikworkshop.grainsplit",
+    "version": "0.0.1",
+    "releaseDate": "2026-07-19",
+    "title": {
+      "ko": "결 가르기",
+      "en": "Grainsplit"
+    },
+    "tagline": {
+      "ko": "반동 정점에 쐐기를 박아 갈라짐을 띠 안에 세운다.",
+      "en": "Drive the wedge at the peak of the recoil and stop the split inside the band."
+    },
+    "description": {
+      "ko": "통나무가 고유 주기로 요람에서 튕겨 오른다. 그 반동 정점에서 탭하면 쐐기가 깊이 박히고 균열이 결을 따라 전진한다. 어긋나면 전진량이 줄고, 창을 벗어나면 쐐기가 튕겨 탭만 소모한다. 균열 끝이 통나무에 칠해진 초록 띠 안에 서면 성공, 띠를 넘으면 산산조각, 탭 예산을 다 쓰고도 못 미치면 안 갈라진 채 넘어간다. 통나무 14개를 지나며 반동 주기와 판정 창, 띠 폭이 좁아지고 결의 휘어짐과 옹이가 늘어난다. 쐐기 3개를 다 부러뜨리면 끝난다.",
+      "en": "A log springs up out of its cradle on its own period. Tap at the peak of that recoil and the wedge seats deep, driving the crack along the grain. Off the peak the crack advances less, and outside the window the wedge bounces and the tap is spent. Park the crack tip inside the green band painted on the log to split it, run past the band and it shatters, run out of taps short of it and it never opens. Across 14 logs the recoil quickens, the judgment windows and the band narrow, and the grain bends harder with more knots. Three snapped wedges end the run."
+    },
+    "controls": {
+      "ko": {
+        "primary": "화면 어디든 탭하면 쐐기를 박는다. 조준도 드래그도 없다.",
+        "keyboard": "Space로 쐐기 박기, R 다시 시작, M 음소거, P 일시정지, L 언어 전환.",
+        "restart": "결과 화면의 다시 (R) 버튼을 누르거나 화면을 탭해 다시 시작한다."
+      },
+      "en": {
+        "primary": "Tap anywhere to drive the wedge. No aiming, no dragging.",
+        "keyboard": "Space drives the wedge, R restarts, M mutes, P pauses, L switches language.",
+        "restart": "Press the Again (R) button on the result screen or tap the screen to start again."
+      }
+    },
+    "session": {
+      "typicalSeconds": 90,
+      "maxSeconds": 180,
+      "failureBudget": 3
+    },
+    "display": {
+      "designWidth": 390,
+      "designHeight": 844,
+      "orientation": "portrait",
+      "fit": "letterbox-uniform"
+    },
+    "supportedLocales": [
+      "ko",
+      "en"
+    ],
+    "arcade": {
+      "entry": "entry.mjs",
+      "capabilities": [
+        "pointer",
+        "keyboard"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "fit": "letterbox-uniform"
+      },
+      "assets": [
+        {
+          "source": "public/fonts/Galmuri11.woff2",
+          "releasePath": "fonts/Galmuri11.woff2"
+        },
+        {
+          "source": "public/fonts/Galmuri11-Bold.woff2",
+          "releasePath": "fonts/Galmuri11-Bold.woff2"
+        },
+        {
+          "source": "public/fonts/Galmuri14.woff2",
+          "releasePath": "fonts/Galmuri14.woff2"
+        },
+        {
+          "source": "public/art/title-key.jpg",
+          "releasePath": "art/title-key.jpg"
+        }
+      ]
+    },
+    "source": {
+      "launchpadCommit": "4fec69a4762999bdf90d8ed6400d2b181edb78e1"
+    },
+    "media": {
+      "titleKeyImage": "public/art/title-key.jpg",
+      "visualMedium": "real-time fracture propagation: a seeded grain vector field walked by the crack tip on a fixed 1/60s step, procedural wood fibre texture in the opened split, procedural growth rings, knots and wood dust",
+      "audio": "synthesized WebAudio only, no audio files",
+      "screenshots": [
+        "verification/first-play.png",
+        "verification/verb-precise.png",
+        "verification/verb-grain.png",
+        "verification/game-over.png"
+      ]
+    }
+  },
+  "files": {
+    ".claude/settings.json": "82e6c2079d3891c0d45ca0393f1aae724c550e074e64de4f8ed6bf9fb6fb8c09",
+    ".github/workflows/ci.yml": "697742807a6fe052ed4942d89352772187d1a9251bd1ab5479b447ff1334af32",
+    ".gitignore": "e1a39179d2bf7507c76926e085232dc5adb2b7400f3158c19e0ebbcefd1c7f22",
+    ".granite/app.json": "76fabb4f0b5a1cfc585f3324e400e8dd07da469be131fa75613db8973eaf5981",
+    "AGENTS.md": "a94c4a6aba1f94b34eee2da3899f1efbcdbb5ad33e9755ee87673c23dc172021",
+    "CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "GDD.md": "3965b93c9527d9a19f9f067905978d0916086bcb82d586347f521418eb3f474f",
+    "README.md": "1ff6d97f288b5282f1704ceeaa21781674b5912be6178dcfcae7aa7d3da2f7b5",
+    "android/.gitignore": "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971",
+    "android/app/.gitignore": "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4",
+    "android/app/build.gradle": "12ead8b9875cb3e1913c828cf1b0ac4f2138d8f575a8b33b67777f13a12168e8",
+    "android/app/capacitor.build.gradle": "dcabf4fc6a54b67c751e68be93706d84252d77dc167602929fcf8d6cdebeca2c",
+    "android/app/proguard-rules.pro": "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2",
+    "android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java": "ff50b4c110a7434312f9af54171f9e8523b015836f707c9b387b76d4c38a97f8",
+    "android/app/src/main/AndroidManifest.xml": "97c5df4003fc6aff1705b75b4cf8c6fe94955447b04113cf2d8c4c43a934ddf8",
+    "android/app/src/main/java/com/sputnikworkshop/grainsplit/MainActivity.java": "723a2ac29deae7dff2c8836c23059f230b43be65d822ea32c5992bc998820b30",
+    "android/app/src/main/res/drawable-land-hdpi/splash.png": "08cc34ad7713fe7ed58bceaa37b2387b670c53cd60264b4bd6442db3098e75dc",
+    "android/app/src/main/res/drawable-land-mdpi/splash.png": "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff",
+    "android/app/src/main/res/drawable-land-xhdpi/splash.png": "22f87e1e3bc89aa01a7dbc39c9a4db058cd0bf4ad3fe9f55712bf69eb997f4bf",
+    "android/app/src/main/res/drawable-land-xxhdpi/splash.png": "42aa26392546fcdee1b8d3ac6d4b41bfcceb41dc6a4f3a3c30c24a8a8f4db862",
+    "android/app/src/main/res/drawable-land-xxxhdpi/splash.png": "60393ce8636fd263e4e1fea3fd4ab2de948c6295e898fda9b50ac4e5283be809",
+    "android/app/src/main/res/drawable-port-hdpi/splash.png": "c5015f4ba3628392b538386c5e210f0b94f352a3160adab934fd0311972137ca",
+    "android/app/src/main/res/drawable-port-mdpi/splash.png": "07fa579e1c83e04ba7f9cbcbfcf41b68e15fe3638f2c44a04e58b809103e6b69",
+    "android/app/src/main/res/drawable-port-xhdpi/splash.png": "b73049cb37fe76d6c11b87a796766bf6af0c85483b31eb6a921657b0d764a4b9",
+    "android/app/src/main/res/drawable-port-xxhdpi/splash.png": "0c7f1212f25b7b90e9a6e1d320013e4ff3d3e03e634cbb07b7b7981cac51627f",
+    "android/app/src/main/res/drawable-port-xxxhdpi/splash.png": "3db071a03b2f8ffe0dfd4170fc59842d53cd15bba5e88af59401d58efabf7827",
+    "android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml": "a8514094f754b099d3e55ce1d6e0b2de79db418b2eeacb0fc2a6bb0bfadef221",
+    "android/app/src/main/res/drawable/ic_launcher_background.xml": "718ba51adf166bb55c3e9936bb8199a0148457f7f0191aaa2f37a94f3159d6ec",
+    "android/app/src/main/res/drawable/splash.png": "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff",
+    "android/app/src/main/res/layout/activity_main.xml": "5d770feb791313b947020cbfc57e5c733c556dac5e9e49261a1190e527073253",
+    "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c",
+    "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml": "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c",
+    "android/app/src/main/res/mipmap-hdpi/ic_launcher.png": "16d0f92713629b68471f7a25b00fdf055b1f121bc203893681011c2cdc9788fa",
+    "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png": "82f129c3d6002ea79130eb191b1ea923a60d4c527edc01f1a3e93044aeb767f3",
+    "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png": "16d0f92713629b68471f7a25b00fdf055b1f121bc203893681011c2cdc9788fa",
+    "android/app/src/main/res/mipmap-mdpi/ic_launcher.png": "9bb4d5c8436952f0f0e9e7f799e900fb14ea0cfd6b5ca126cc578160232c8bf6",
+    "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png": "6f4a3b7c1947c0a6afcbd4e327f88563dfee8ea366ea2e92a7a4343afb6c36a0",
+    "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png": "9bb4d5c8436952f0f0e9e7f799e900fb14ea0cfd6b5ca126cc578160232c8bf6",
+    "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png": "8d67e31cd988bd450351ffc66b49b41097b8c67f916db4663f7b0d0f3087ff6a",
+    "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png": "6eade8a04a7f6cc9f4916cc8ab05d644d37e59109ec027ac720ba4259d96185a",
+    "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png": "8d67e31cd988bd450351ffc66b49b41097b8c67f916db4663f7b0d0f3087ff6a",
+    "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png": "2685aec22c7f2eef2437de4026876a507bd8e0a899caf7a49905f72f719ac3c9",
+    "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png": "22914ce65ffe22880051e6142216a12feeca70cd3f0f3dfcf09992ddbbc4e973",
+    "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png": "2685aec22c7f2eef2437de4026876a507bd8e0a899caf7a49905f72f719ac3c9",
+    "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": "f45dd01eacc013a1ac8b4d75ab4c24fba4651a3d5c02715bbfa2f224812da59c",
+    "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png": "ca09e197472e87da02e26e9389a0fa5f6cf19d499a46f98347f3dea2e949b76a",
+    "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png": "f45dd01eacc013a1ac8b4d75ab4c24fba4651a3d5c02715bbfa2f224812da59c",
+    "android/app/src/main/res/values/ic_launcher_background.xml": "d80a637240092d84a76bf66fdff7a711f43fba8b25088c6d6d7ea2600aaf0df7",
+    "android/app/src/main/res/values/strings.xml": "baf7f8f061bda81bee1ac4a2e102870d459f787f3d9ed9ef9b5ebad50ab59fed",
+    "android/app/src/main/res/values/styles.xml": "18ebba36575e9461347ee67361b23caf095f158ee85dbefe1b83a4669ba5bd6c",
+    "android/app/src/main/res/xml/file_paths.xml": "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa",
+    "android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java": "d4045ae8fac1f0807e6b24eb34e68409a9a235df9d1a3f896fb8c9a49424363d",
+    "android/build.gradle": "46ade7db7afeb8049ccea59fce83095dca736ceb8c9acd79cc944e988c3357d9",
+    "android/capacitor.settings.gradle": "f48ff04e04511f1410c4d08caf297b23ff072c63c9aa1be59dbe4e3b7d621994",
+    "android/gradle.properties": "3bab15c5b8bc4c2f4b6cf525497d15ad4abca53a460e6dd2eb0f0135817d31e6",
+    "android/gradle/wrapper/gradle-wrapper.jar": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
+    "android/gradle/wrapper/gradle-wrapper.properties": "9a479a85aa879bb55284fc16d0de5b81a745c3854f4e2d88c42e7debaf007435",
+    "android/gradlew": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409",
+    "android/gradlew.bat": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd",
+    "android/settings.gradle": "6ce098d15ebd69b44c4ecd786bca1bdc366340d2459b2af4d7bb0ab317aa9669",
+    "android/variables.gradle": "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88",
+    "art/prompts/target-screens-pass1.sh": "cb4763ce79626276277df945bce64226926d4c1c37aac82de4962da0ba6b3683",
+    "art/prompts/target-screens-pass2.sh": "08f489da74bba8d08dd01d61262f3d34a01fc77cf1b83917ddd2fffa776b907e",
+    "art/source/title-key.png": "3cad85b107b30bf7ae2ad4b242ce6f0ae87a20d37fe9a1d77e93feb6accc75bb",
+    "autoplay.html": "58e51f9bded0bde8630c23be5425649a2febb8972e93ea5fed209d9bbb9e2c40",
+    "capacitor.config.ts": "d6fb82b7c020fb5fd198255da1e084bad28e052a29d6531ab4b992d93e14a5ff",
+    "design/targets/first-play.png": "ae05f25947f9dde06abaa2e3c399b4591310214cb0f3cfd6dd21e88a1ff97e9a",
+    "design/targets/game-over.png": "a6f986ab8d85dd28555c57805a7503495d74c3888aba212a86c70ced69c9ae4b",
+    "design/targets/verb-fail.png": "75cddeac1edbd3df38b44adf39fba4151bfd08052880c191f8ac089e764a4609",
+    "design/targets/verb-precise.png": "8f8eba2fc9252060f70ebb14d6bb94ccf7053732e227cb0f9454c10fd793023b",
+    "design/targets/verb-success.png": "945202ce230c028ffb9fca44b3cabd54868d7f3f34fc4fd4571cd646ff4ed47e",
+    "granite.config.ts": "c042aed9e09caa35e7cad267d609879cfbc8305d6fc3a7a280fb03cfa98f8da9",
+    "index.html": "1f24d8c0ed585a61cf4ba0c9ee60da9c0bc3d3010d00832635eae65c6580eb62",
+    "package-lock.json": "e684b976dc19f0c16d37fde488d62515cb9575c9c2291f0b7331727db88d7e8c",
+    "package.json": "88e7af329ab749ca75d4632c9ff19f8feb6d95b318aa0b20eb526958f961da5d",
+    "public/apple-touch-icon.png": "583e04e3f2b9a7419108017a479a8386de26426489d2a11c064134301e757f5d",
+    "public/art/title-key.jpg": "ff7246e4c2fe9d51b055a2b8f4b2fa267a9ea57f703e02ef8bfabada7ace90f5",
+    "public/favicon-16.png": "6eb7f4c0c04c935d5a3112765f22f6a706ba21032ecb6ab2482ef4cdb18f5c0f",
+    "public/favicon-32.png": "e2575d046dda396377edefbb5d3f171aff3b5169eb53e73d38aeebbbe8e3d9bb",
+    "public/fonts/Galmuri11-Bold.woff2": "03edc70cfacc32ec4d5d356ca2dbd9ff3fea92d08d6924eb8ace3b8b42336cb6",
+    "public/fonts/Galmuri11.woff2": "bb5655930587f2e3a2eb943afff42e39d9dc489a58df45a5fd524a9fd2178e90",
+    "public/fonts/Galmuri14.woff2": "3f424e1abd853e0d2e1e2a59f83e171a8d88ed1a7902a9c0d5bb27c69ee946cd",
+    "public/icon-192.png": "8ab8107e8d2aab1477f2a5998966718086dd64a13efb836403d326a1da24f074",
+    "public/icon-512.png": "5d15a51245b9f2180fe68a64d603fb980b65a6cf19aef33b26a617ce7d5c7089",
+    "scripts/android-gradle.js": "61d7d45ca36abd716daafb14de63c6277a96c7579baf876cd0870f563960a697",
+    "scripts/build-release.mjs": "40effaeb8bfa79b08703b7dd59b957765d139a0a8d36ae5d7e0907656be7c01a",
+    "scripts/bump-version.js": "447ac39caf9b460a0a7a3ff390742ed4ee5d656d4b0cc1f811916b2ba5159adf",
+    "scripts/capture-verbs.mjs": "0f0c55fd17782cc44bbc27435834c51a8b32c2e27ecd8b57eb5a3dc2b222265a",
+    "scripts/gen_app_icon.py": "e72fe312671e35d6412402fa27d848454184250dcbfb665db3403e7f30c7f182",
+    "scripts/new-game.js": "81836a939779f71ec89a89ab6a90c3f0d65e2167919c751656d9a5a9e56e3dae",
+    "scripts/playability-sim.mjs": "7b3379f72e9e70055fb0806dee3804d2d4a6cb349f98aae4286a64c9cb7f5188",
+    "scripts/smoke.mjs": "98bf8e30f18a57a37ad468b6a89d04d40789a4727c83495dd8930c25e21ac2c7",
+    "scripts/test-gate.mjs": "80a4405893447b1b6bda4859fa0b7a5503a78c57c1fe20c1a0a8516acf3f05d7",
+    "scripts/verify-release.mjs": "9546086fa94efd3726ff145fbd4de538654f3f09b8c8aeb100e25cde48ed7866",
+    "scripts/viewport-smoke.mjs": "9cc6e379207c90a16feecec49b3db9a01587028adfb9ba4062cbae4f13ed4726",
+    "smoke-result.json": "f3738d45124c7485bd4027ca79e2d9dca69be07a0b696b234e45568a94300d38",
+    "smoke.png": "b17eae1df000cec77264ff073716d7802aa13e4deabd78738c6e593651094525",
+    "src/App.tsx": "b22a17d06e50a323c0364a32308c3aa8967c2d262aa417f20a913ede36b39188",
+    "src/appConfig.ts": "1ec90f3e66687fa8eff7330efb89572c4a566e6c3367a7728bc91df099fe3d25",
+    "src/arcadeEntry.ts": "bd8e1ddfaacef588e47182d66f2791cb030e010cc0042cb6f59d54a3a9404fc6",
+    "src/autoplay.tsx": "15a959badecabe8224d73b52ab821f289ed3c5063d31fa7b71507d548efe3edd",
+    "src/components/GameScreen.tsx": "7b8fb5c8ade246c327c2a12791531eb939882a440224c97faf15a768d27e7d91",
+    "src/game/GrainsplitGame.ts": "ddea0e8bd5d150659f797404646e6bd7cfc45bd15bb64c93d5c31a41117ca9d6",
+    "src/game/grainsplit/audio.ts": "2d4d2128e8d39c4ffefeb34d7f48bc303662f49716228771fbe107fd975a7d54",
+    "src/game/grainsplit/bands.ts": "c88d2472a637aaf6227be8cf3887454f76ecbe3bf80aadd0667aebbddde880e5",
+    "src/game/grainsplit/engine.test.ts": "e247d21da45d18e8c9e3146785b741cfc26c9b5a375f598dabb841e0ef1412c7",
+    "src/game/grainsplit/engine.ts": "b9f7204a984be27c1bebb6971a104004910327d0664c6044bdd6d9ebab9ebe76",
+    "src/game/grainsplit/grades.test.ts": "0eb4c1938fe3e5634c35342b691149214a146891ab15c49bcebcf2ade2c5f25b",
+    "src/game/grainsplit/grades.ts": "1e83888c19a46594c7de565dbacba1fc3049e6c37c58c3327f291debc042a536",
+    "src/game/grainsplit/rules.test.ts": "0e4c5c50853ef1c3333d9e8b32c7f45168cadcc802e66837a23a3bff5cadcb46",
+    "src/game/grainsplit/rules.ts": "a3a047368f4bde84d183fd9a82db78f81bb85e250f21c553890ca2ae4686e054",
+    "src/game/grainsplit/strings.test.ts": "f188c0ce3cc197325ba28745e97f428c5cda5183cbbc7de1916776f432e9da6a",
+    "src/game/grainsplit/strings.ts": "ed5cf6c1bac4fc28947e9fd7b7b6289ebc057bdbb9a95ed89e06539541fa94ee",
+    "src/game/types.ts": "0ce0f0f3c27ffe445bc6fc5bb29834ecd20bdc3001f470ca5e865ac397f357fc",
+    "src/index.css": "52d6bdf7070024dab40a62efd7b5eb2a6306f922dabccdc441a520e202efe16f",
+    "src/main.tsx": "41e6d61c7f69f9fc34dba1141e6e816d8e4d1bc24301b0d5f521da047c9d2d43",
+    "src/test/setup.ts": "df60153a6d086a0f1febdfe1e3bd749e43692f07a19905de952e2e7b153c362a",
+    "src/vite-env.d.ts": "2d5f1a5cc59c066ef37f4bb39a40040193c483a7bb0a7e8bb4f08372a6c65e32",
+    "tsconfig.app.json": "7c343cac9322ad199f865d556e776fffe781160813aea9db3eb5f2a98322808f",
+    "tsconfig.json": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+    "tsconfig.node.json": "3ced5d22ba9e246c839a695526296a8d067fbe9db838d728516d2eac9215b333",
+    "verification/capture-result.json": "c6c9d73d433a9c8ced0cc804811b749f1ced2bde4407f5c84f58be2107b0c1f7",
+    "verification/capture.log": "ad14cd9202cbf0d9eb921900a56fd230f53db843117238fde378317d85bb54ef",
+    "verification/failure-frame.png": "08732e8fa3fed6ad0a3cee855ce6224269c9ecdfc92faf8485b9599d8b41131b",
+    "verification/first-play.png": "acf8fda697a857222e1d2b0bf48a6ed90866e4cb372e051eb5de29cb2ecc879d",
+    "verification/game-over-en.png": "cd732ea1c0c3285eaeb1c3bdebe36dd947e6a579e8aa6f21e84e84a4d8bfcdf5",
+    "verification/game-over.png": "2ab9111d69caabc8373ca6481ac12439220c9b373d2ca164aafd27a331733b2f",
+    "verification/grade-name-en.png": "fd8a432dc6885ea4b7ab4877493c8085e728df19a66da740ee71be7714d973b1",
+    "verification/grade-name-ko.png": "436bb50862ba16062596b7ca0b1cfb2f836cee1c8fadc5876f2aa97f61428f9f",
+    "verification/muted.png": "340b60cd913ed0becd789c13b2f02384884bc966407198f2b266d5acd91f8465",
+    "verification/paused.png": "48d0b0d2416fd44fe6cc4874945b0aa23f3d78bfdec6a036ed37e569d4bf7e2d",
+    "verification/playability-sim.json": "82ee5f56ac54dbdb7702ee249c4308b463390d4b75de5a3d0de2632ec7377788",
+    "verification/playability-sim.log": "3b654d21193f0b815aeceb4d535d25b8d409fd5f30adec3154c7d276a2b5960a",
+    "verification/title.png": "47ef3489816a666f60a6730c04d20ecf8bb3e9c668b1a0612383688fa5d665a1",
+    "verification/verb-bite.png": "916044364d263e7abe61dfac68b34c48e43b4e32babcc997a8368635ec3ac430",
+    "verification/verb-grain.png": "f996aa391885a6a25ac6f21e38186c098feb9e4afa20e54e9e1e2ff5a237420f",
+    "verification/verb-miss.png": "68aeb887cebf5e65ab7d0879087d019ab810903847a6c810e8aaeae1398e4148",
+    "verification/verb-precise.png": "60c4efce35f801be1ecb26b11e2164fc93f4ba43b3eeba69ca6e7f34c0aa6ef4",
+    "verification/viewport-360x800.png": "efa13a94253b313887c4ca731615e7959e7f2ce9f115bb9d01706e2101c805ae",
+    "verification/viewport-390x844.png": "919625bb5597af1fc9aaeb890801a5192899e24215f77ef4a552651f3044a12c",
+    "verification/viewport-430x932.png": "947bde304b489952e2e6dbf767395a95af0ebe643ef9dab1ea69a480fa8ac2ef",
+    "verification/viewport-900x760-wide.png": "d8e3b8f0996bd49b813df9e9c72c4ca850114a93ea37ff6a8b6a538a106edb2a",
+    "verification/viewport-result.json": "8b000433ff4fe254a9497a50b2a966b5b9cb9f3ef90c7ed380093367985ebd76",
+    "verification/viewport.log": "21674b0a4bea8e17c1011e9e9ee84e194e8efa2de49c1e4636a0ed16bc2d09e9",
+    "vite.config.ts": "c645fb735afddfb2ca68aaec89c8fee25d32ec7ea202e045b7eb0aa57a72b1a1",
+    "vitest.config.ts": "539506e625a9fc7407c7eb2a8322a0d7445e5d00ebb8d547fa600d67e307b431"
+  },
+  "artPrefix": {
+    "bytes": 8805,
+    "sha256": "87914b7ebe71beaab5d4075df88ab0540960844ba6629c497e7eea20d9ec15de"
+  },
+  "dayPrefix": {
+    "bytes": 35809,
+    "sha256": "b5bb4a79b3c01bec5e2d36d84d22fd2288d6b4d35caaec33b1a795ff65f83d86"
+  },
+  "publicIdentity": {
+    "studio": "Sputnik Workshop",
+    "maker": "Laika",
+    "laikaBaseId": "laika-base-v1",
+    "laikaBaseSha256": "820e6d43e915c4e9e32ddcd3cc14d0f2537d99f6d8d397bbd40fc416137a6712"
+  },
+  "relocks": [
+    {
+      "at": "2026-07-19",
+      "reason": "아케이드 포털 CSP에 unsafe-eval이 없어 PixiJS 러너가 부팅하지 못해 arcadeEntry에 pixi.js/unsafe-eval 모듈을 로드했다. 규칙과 판정은 바뀌지 않았다.",
+      "changed": [
+        "smoke-result.json",
+        "smoke.png",
+        "src/arcadeEntry.ts",
+        "verification/viewport-360x800.png",
+        "verification/viewport-390x844.png",
+        "verification/viewport-430x932.png",
+        "verification/viewport-900x760-wide.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "아케이드 러너 오리진 기준으로 타이틀 키 이미지가 404가 나서 모듈 URL 기준 해석으로 고쳤다. 규칙과 판정은 바뀌지 않았다.",
+      "changed": [
+        "smoke-result.json",
+        "smoke.png",
+        "src/game/GrainsplitGame.ts",
+        "verification/viewport-360x800.png",
+        "verification/viewport-390x844.png",
+        "verification/viewport-430x932.png",
+        "verification/viewport-900x760-wide.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "잠금 뒤 수정 사이클 두 건 이후 검증 캡처를 다시 촬영했다.",
+      "changed": [
+        "verification/capture-result.json",
+        "verification/failure-frame.png",
+        "verification/first-play.png",
+        "verification/game-over-en.png",
+        "verification/game-over.png",
+        "verification/muted.png",
+        "verification/paused.png",
+        "verification/verb-bite.png",
+        "verification/verb-grain.png",
+        "verification/verb-miss.png",
+        "verification/verb-precise.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "게시 게이트가 뷰포트 캡처를 다시 촬영해 증거를 갱신했다.",
+      "changed": [
+        "verification/viewport-360x800.png",
+        "verification/viewport-390x844.png",
+        "verification/viewport-430x932.png",
+        "verification/viewport-900x760-wide.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "뷰포트 증거를 결과가 바뀔 때만 갱신하도록 고쳐 게시 게이트의 저장소 청결 검사와 충돌하지 않게 했다.",
+      "changed": [
+        "scripts/viewport-smoke.mjs",
+        "verification/viewport-360x800.png",
+        "verification/viewport-390x844.png",
+        "verification/viewport-430x932.png",
+        "verification/viewport-900x760-wide.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "핵심 동사 재료 반응 수정: 통나무가 실제로 갈라지고 조각이 움직이도록, 등급별 반응 분리, 캡처 타이밍을 렌더 상태 기준으로 교체",
+      "changed": [
+        "scripts/capture-verbs.mjs",
+        "smoke-result.json",
+        "smoke.png",
+        "src/game/GrainsplitGame.ts",
+        "verification/capture-result.json",
+        "verification/failure-frame.png",
+        "verification/first-play.png",
+        "verification/game-over-en.png",
+        "verification/game-over.png",
+        "verification/muted.png",
+        "verification/paused.png",
+        "verification/verb-bite.png",
+        "verification/verb-grain.png",
+        "verification/verb-miss.png",
+        "verification/verb-precise.png"
+      ]
+    },
+    {
+      "at": "2026-07-19",
+      "reason": "등급을 플레이 중 화면에서 이름으로 부르도록 수정(FATAL p10), 인접 등급을 종류로 분리(p9). 판정 파일(bands/engine/rules)은 불변.",
+      "changed": [
+        "scripts/capture-verbs.mjs",
+        "smoke-result.json",
+        "smoke.png",
+        "src/game/GrainsplitGame.ts",
+        "src/game/grainsplit/grades.test.ts",
+        "src/game/grainsplit/grades.ts",
+        "verification/capture-result.json",
+        "verification/failure-frame.png",
+        "verification/first-play.png",
+        "verification/game-over-en.png",
+        "verification/game-over.png",
+        "verification/grade-name-en.png",
+        "verification/grade-name-ko.png",
+        "verification/muted.png",
+        "verification/paused.png",
+        "verification/verb-bite.png",
+        "verification/verb-grain.png",
+        "verification/verb-miss.png",
+        "verification/verb-precise.png"
+      ]
+    }
+  ]
+}

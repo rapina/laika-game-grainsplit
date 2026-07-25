@@ -1,0 +1,30 @@
+node_modules
+dist
+.DS_Store
+*.tsbuildinfo
+.env
+.env.local
+
+# Generated raw images (kept locally only)
+src/assets/portraits/_raw_*.png
+src/assets/scenes/_raw_*.png
+
+# Android
+android/app/build/
+android/.gradle/
+android/build/
+android/capacitor-cordova-android-plugins/build/
+android/keystore.properties
+android/play-service-account.json
+*.keystore
+*.jks
+
+# IDE
+.idea/
+*.iml
+
+# Smoke evidence (smoke.png, smoke-result.json, smoke-*.png)는 검증 증거이므로 커밋한다.
+
+# Arcade release & QA artifacts
+dist-arcade
+*.ait

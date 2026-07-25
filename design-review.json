@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-19",
+  "sourceHash": "fc59b7a74f33a36ade4a0a145450d2a6a19c0ffe6540176711a5bc850e8ab527",
+  "verdict": "pass",
+  "method": {
+    "build": "npm run build:arcade (dist-arcade, releaseSha 10c411de5be5f2d1f5d8a3766412891ab93be2f9, 18 files / 4101318 bytes verified); played through the vite dev server at autoplay.html?seed=N with real pointerdown and keyboard events, source hash recomputed independently and matching smoke-result.json",
+    "inputPath": "pointer-events",
+    "inputPathsExercised": [
+      "primary-tap-anywhere (ko: 화면 어디든 탭하면 쐐기를 박는다. 조준도 드래그도 없다 / en: Tap anywhere to drive the wedge. No aiming, no dragging)",
+      "keyboard-space-drive-wedge (ko: Space로 쐐기 박기 / en: Space drives the wedge)",
+      "keyboard-r-restart (ko: R 다시 시작 / en: R restarts)",
+      "keyboard-m-mute (ko: M 음소거 / en: M mutes)",
+      "keyboard-p-pause (ko: P 일시정지 / en: P pauses)",
+      "keyboard-l-language (ko: L 언어 전환 / en: L switches language)",
+      "restart-again-button (ko: 결과 화면의 다시 (R) 버튼을 누른다 / en: Press the Again (R) button on the result screen)",
+      "restart-screen-tap (ko: 결과 화면에서 화면을 탭해 다시 시작한다 / en: tap the screen to start again)"
+    ],
+    "profiles": ["intuitive", "skilled", "natural-gesture"],
+    "runsPerProfile": 3
+  },
+  "promises": [
+    {
+      "id": "p1",
+      "source": "GDD.md#콘셉트",
+      "claim": "나무가 스스로 튕겨 올라오는 그 순간에 쐐기를 박아 넣어, 갈라짐을 정확히 표시된 자리에서 멈춰 세울 수 있는가.",
+      "observed": "통나무 마구리면이 밴드별 고유 주기로 반동하고 정점에서 연한 초록 링이 열린다. 탭하면 쐐기가 자리를 잡고 균열이 마구리면 위를 결을 따라 걸어 내려간다. 균열 팁이 칠해진 초록 띠 안에 서면 통나무가 두 쪽으로 벌어지고, 띠를 넘기면 쐐기꼴 파편으로 흩어진다. 한 방의 저항감이 히트스톱과 흔들림과 나뭇가루 세 채널로 실제로 온다.",
+      "status": "met"
+    },
+    {
+      "id": "p2",
+      "source": "GDD.md#콘셉트",
+      "claim": "시각 매체는 실시간 파괴 전파다. 시드 고정된 결 벡터장 위를 균열 팁이 1/60초 스텝으로 걸어가고, 벌어진 틈은 절차적 목재 섬유 텍스처로 채워진다.",
+      "observed": "디버그 상태의 crackDrawnP(렌더된 진행도)가 crackP(판정된 진행도)를 몇 프레임에 걸쳐 뒤따라 따라잡는 것을 확인했다. 균열선은 결 벡터장으로 좌우로 흔들리며 그려지고 벌어진 입술은 밝은 마구리면과 찢긴 섬유 보풀로 채워진다. 이 검토의 모든 동사 캡처는 crackDrawnP가 판정에 쓰인 crackP에 도달한 프레임에서 찍었고, 고정 지연으로 찍은 프레임은 하나도 쓰지 않았다.",
+      "status": "met"
+    },
+    {
+      "id": "p3",
+      "source": "GDD.md#콘셉트",
+      "claim": "재료는 마른 활엽수 통나무다. 나이테, 세로 섬유결, 옹이, 갈라진 면의 보풀, 튀는 나뭇가루.",
+      "observed": "마구리면에 동심 나이테와 방사형 건조 균열이 그려지고, 옹이는 실제 옹이 무늬로 그려져 균열이 닿으면 꺾인다. 갈라진 입술에는 긴 섬유 보풀이 나고 강한 타격에서 나뭇가루가 하늘로 튄다. 게임의 주요 대상이 단색 도형으로만 그려진 곳은 없다.",
+      "status": "met"
+    },
+    {
+      "id": "p4",
+      "source": "GDD.md#난이도-밴드",
+      "claim": "밴드 표의 각 변수는 화면에서 지각된다. 반동 주기, 성공 창(링이 열린 시간), 정타 창(안쪽 굵은 선), 목표 띠 폭, 결 편향, 옹이.",
+      "observed": "반동 주기는 쐐기의 오르내림으로, 성공 창은 링이 열려 있는 시간과 링 굵기(밴드가 오르면 눈에 띄게 얇아진다)로, 정타 창은 링 안쪽 호가 차지하는 각도 비율로, 띠 폭은 통나무에 실제로 칠해진 띠의 폭으로, 결 편향은 섬유선의 휘어짐(편향값에 비례해 그려진다)으로, 옹이는 그려진 옹이 개수로 각각 화면에 나온다. 밴드 1과 밴드 2 캡처를 나란히 놓으면 띠 폭과 링 굵기의 차이가 눈으로 읽힌다. 렌더에 반영되지 않는 밴드 변수는 찾지 못했다.",
+      "status": "met"
+    },
+    {
+      "id": "p5",
+      "source": "GDD.md#입력",
+      "claim": "한 통나무당 탭 예산은 계획 탭 수 + 2다. 탭 예산을 다 쓰고도 못 미치면 안 갈라진 채 넘어간다.",
+      "observed": "규칙은 그대로 동작하지만 탭 예산이 화면 어디에도 그려지지 않는다. 소스 전체에서 탭 예산은 디버그 상태에만 나오고 렌더 경로에 없다. 탭 예산 소진이 곧 부족 실패를 만드는데도 플레이어는 남은 탭 수를 알 수 없고, 실패한 뒤 결과 화면에서야 사후에 안다. 판정을 바꾸는데 화면에 없는 값이다.",
+      "status": "gap"
+    },
+    {
+      "id": "p6",
+      "source": "GDD.md#판정",
+      "claim": "결 등급은 오차 크기가 결 창 이내이면서 그 탭이 균열 팁을 목표 띠 안에 세운 마지막 탭일 때다.",
+      "observed": "규칙대로 동작한다. 결 창 안이어도 띠에 서지 못하면 정타로 강등되는 것을 확인했다. 다만 결 창 자체는 링 위에 표식이 없다. 성공 창과 정타 창은 링이 그리는데 결 창의 폭만 플레이 중 읽을 수 없다. 결의 조건이 결과 화면에 문장으로 적히고 발동 순간 이름이 불리는 것으로 일부 보완되지만 폭은 화면에 없다.",
+      "status": "gap"
+    },
+    {
+      "id": "p7",
+      "source": "GDD.md#점수",
+      "claim": "총점은 쪼갠 통나무 수, 평균 정확도, 정타와 결 횟수의 사전식 합이다.",
+      "observed": "화면에 표시되는 수치가 전부 판정이나 결과에 관여한다. 관측한 총점 3,353,007은 쪼갠 3개와 평균 정확도 0.353과 정타결 7회로 그대로 분해되어 사전식 점수가 실제로 그 값들을 쓴다. 통나무 카운터, 오차 눈금과 수치, 등급 이름과 사다리, 띠, 쐐기 세 개, 장작더미도 모두 규칙에 물려 있다. 표시만 되고 아무 데도 쓰이지 않는 스탯은 찾지 못했다.",
+      "status": "met"
+    },
+    {
+      "id": "p8",
+      "source": "GDD.md#화면",
+      "claim": "첫 판 가이드는 플레이 영역 바깥 하단에 있고 첫 탭 전까지 반동이 정지한다. 첫 통나무에서만 링 안에 지금이 나타난다.",
+      "observed": "첫 프레임에서 반동이 정점에 얼어붙은 채 링이 열려 있고 링 아래 지금이 떠 있다. 하단 플레이 영역 밖에 탭 = 쐐기 박기 / 그린 링이 열릴 때 / 통나무 14개, 쐐기 3개 세 줄이 있다. 무엇을 누르는지, 언제 누르는지, 얼마나 하는지 세 질문이 이 한 프레임만으로 답해진다.",
+      "status": "met"
+    },
+    {
+      "id": "p9",
+      "source": "GDD.md#화면",
+      "claim": "게임 오버는 상단 끝 · 통나무 9/14와 하단 큰 버튼 다시 (R), 얼어붙은 마지막 균열과 팁·띠 거리 화살표·수치를 남긴다.",
+      "observed": "끝 · 통나무 3/14, 평균 정확도 0.35, 흔들림 ±179ms, 정타·결 7회, 총점, 결 규칙 문장, 얼어붙은 균열과 화살표 그리고 16% 부족 · 밴드 2, 부러진 쐐기 세 개, 누적된 장작더미, 큰 다시 (R) 버튼이 모두 한 화면에 있다. 얼마나 갔는지와 다음에 무엇을 할지 두 질문이 답해진다.",
+      "status": "met"
+    },
+    {
+      "id": "p10",
+      "source": "GDD.md#아트-사운드",
+      "claim": "판정 등급은 시각(균열 폭과 파편량), 청각(음색과 세기), 시간 연출(히트스톱 길이) 세 채널에서 구분된다.",
+      "observed": "네 등급을 각각 판정 직후 렌더가 따라잡은 프레임에서 찍어 한 장씩만 보고 판별했다. 빗나감은 마구리면에 자국이 전혀 없고 쐐기만 튕긴다. 물림은 좁고 어두운 실금이 짧게 난다. 정타는 그 실금과 종류가 다르게 넓고 밝은 마구리 속살이 드러나며 긴 보풀이 서고 하늘로 나뭇가루가 튄다. 결은 통나무가 아예 두 쪽으로 벌어져 있다. 인접 등급이 양이 아니라 종류로 갈려 있어 물림과 정타도 비교 대상 없이 구분된다. 각 등급의 재료 반응과 등급 이름 두 가지가 프레임 하나로 모두 답해졌고, 답할 수 없는 등급은 없었다.",
+      "status": "met"
+    },
+    {
+      "id": "p11",
+      "source": "design-review.md#2",
+      "claim": "등급은 발동하는 순간 그 이름으로 화면에서 불려야 하고, 한국어와 영어 모두에서 그래야 한다.",
+      "observed": "모든 타격에서 등급 이름이 화면 중앙 상단에 등급 고유 색으로 튀어나오고 그 아래 빗나감 · 물림 · 정타 · 결 사다리가 해당 칸만 밝게 켜져 함께 나온다. 영어 판에서도 같은 자리에 BITE와 MISS · BITE · TRUE · GRAIN이 나온다. 캡처한 프레임의 단계가 play임을 상태로 확인했으므로 결과 화면 전용 등급이 아니다. 네 등급 캡처 모두 등급 이름이 함께 찍혀 있다. 이 항목은 예전 검토가 거부했던 지점이라 locale을 실제로 전환해 각각 타격한 뒤 렌더된 상태를 기다려 찍는 방식으로 적대적으로 확인했다.",
+      "status": "met"
+    },
+    {
+      "id": "p12",
+      "source": "design-review.md#1",
+      "claim": "개발용 표시가 화면에 남아 있지 않다.",
+      "observed": "배열 인덱스나 일련번호, 판정 영역을 그대로 드러낸 단색 도형, 바운딩 박스, 와이어프레임, 좌표 격자, 내부 상태 덤프, FPS와 시드와 상태 이름 표시를 찾지 못했다. 화면의 유일한 내부 단위는 오차 ms인데 이는 GDD가 지정한 교정 신호이고 빠름과 늦음이라는 플레이어의 말과 링 위 눈금을 함께 달고 나온다. 픽셀이나 라디안이나 프레임으로 적힌 수치는 없다.",
+      "status": "met"
+    },
+    {
+      "id": "p13",
+      "source": "GDD.md#실패-예산",
+      "claim": "실패 예산 3은 요람 옆에 선 쐐기 세 개로 그리고 실패 1회에 하나씩 부러진다. 구석 HUD 카운터가 아니다.",
+      "observed": "요람 왼쪽에 쐐기 세 개가 서 있고 실패할 때마다 왼쪽부터 하나씩 부러진 모양으로 바뀐다. 산산조각 캡처에서 첫 번째가 꺾여 있고 게임 오버 캡처에서 세 개 모두 부러져 있다. 숫자 카운터는 없다.",
+      "status": "met"
+    },
+    {
+      "id": "p14",
+      "source": "GDD.md#콘셉트",
+      "claim": "세계는 해 질 녘 장작 마당이고 왼쪽 장작더미에 쪼갠 것과 망친 것이 함께 쌓이고 지워지지 않는다.",
+      "observed": "노을 하늘과 침엽수 실루엣 아래 요람이 놓이고, 화면 왼쪽 아래 더미가 판이 진행될수록 실제로 쌓인다. 쪼갠 것은 밝은 마구리면이 보이는 조각으로 망친 것은 어두운 조각으로 구분되어 함께 남고 판이 끝날 때까지 지워지지 않는다.",
+      "status": "met"
+    },
+    {
+      "id": "p15",
+      "source": "GDD.md#입력",
+      "claim": "주 입력은 화면 어디든 탭이고 조준, 드래그, 스와이프, 멀티터치가 없다.",
+      "observed": "화면 중앙과 좌하단 구석에 각각 포인터 이벤트를 넣어 보았고 좌표와 무관하게 같은 판정이 나왔다. 절대량 재현을 요구하는 연속량 입력은 없으므로 표시 없는 절대량 과제도 없다. 보조 입력인 Space는 자동 조준이 아니다. 임의의 순간에 12번 눌러 나온 오차가 -441ms에서 +276ms까지 퍼져 포인터와 같은 판단과 같은 오차 여지를 가진다. 어떤 입력도 게임을 대신 풀어 주지 않는다.",
+      "status": "met"
+    },
+    {
+      "id": "p16",
+      "source": "game.manifest.json#controls",
+      "claim": "키보드는 Space로 쐐기 박기, R 다시 시작, M 음소거, P 일시정지, L 언어 전환이고, 결과 화면의 다시 (R) 버튼을 누르거나 화면을 탭해 다시 시작한다.",
+      "observed": "매니페스트에 적힌 조작을 하나씩 실제로 눌렀다. Space는 탭 예산을 1 소모하며 판정을 냈고, P는 멈춤 화면을 띄웠다 되돌렸고, M은 음소거 상태를 껐다 켰고, L은 ko와 en을 오가며 상단 글리프도 EN과 한으로 바뀌었다. R은 판 도중 통나무 7에서 통나무 1로 되돌렸고, 결과 화면에서는 화면 탭만으로도 새 판이 시작됐다. 한국어와 영어 선언이 가리키는 조작이 동일하며 양쪽 로케일에서 모두 눌러 확인했다. 문서화한 조작 중 누르지 않은 것은 없다.",
+      "status": "met"
+    },
+    {
+      "id": "p17",
+      "source": "design-review.md#1-2",
+      "claim": "이기는 방법을 화면만 보고 알아낼 수 있다.",
+      "observed": "이기는 방법 한 줄은 매 탭을 반동 정점에 최대한 붙이는 것이다. 정타 이상이면 전진 배수가 1.0으로 최대이고 균열 각도가 절반으로 펴져 코사인 손실까지 줄기 때문에, 계획 탭 수만큼의 정확한 타격이 팁을 띠 한가운데에 세운다. 화면 안내가 정확히 그것을 가르친다. 숨은 반대 전략이 있는지 적대적으로 검사했다. 정점 조준만 하는 정책과, 다음 전진이 띠를 넘길 상황에서 일부러 크게 빗맞혀 전진 0을 만드는 깊이 정책을 같은 오차 수준으로 각 3판씩 총 12판 돌렸다. 평균 쪼갠 수는 11.33 대 10.33(정밀 수준), 8.33 대 9.67(숙련 수준)로 잡음 안이었고 깊이 정책의 체계적 우위는 없었다. 화면 안내가 후반을 잃는 조언이 아니다.",
+      "status": "met"
+    },
+    {
+      "id": "p18",
+      "source": "design-review.md#2",
+      "claim": "등급 사다리가 살아 있다. 관측한 판에서 최저 등급 위로 올라간 판이 있어야 한다.",
+      "observed": "관측한 21판 전체에서 최저 등급 빗나감부터 최고 등급 결까지 모두 나왔다. 직관 프로필은 정타까지 올라갔고 결에는 닿지 못했으며, 숙련 프로필은 세 판 모두 결을 냈고, 자연 제스처도 한 판에서 결을 한 번 냈다. 사다리가 자체 시뮬이 아니라 실기 분포 위에 놓여 있고 프로필 사이 등급 분포가 실제로 갈린다.",
+      "status": "met"
+    },
+    {
+      "id": "p19",
+      "source": "GDD.md#점수",
+      "claim": "결과 화면은 부호 있는 평균을 진단으로 쓰지 않고 흔들림(오차의 표준편차)을 함께 표시한다.",
+      "observed": "결과 화면에 평균 정확도 0.35와 흔들림 ±179ms가 함께 나온다. 양쪽으로 크게 흔들린 판이 흔들림 수치로 드러나 거의 완벽으로 요약되지 않는다. 부호 있는 평균은 표시되지 않는다.",
+      "status": "met"
+    },
+    {
+      "id": "p20",
+      "source": "design/targets/",
+      "claim": "design/targets의 목표 화면과 실제 캡처가 재료·반응·정보 수준에서 같은 게임이다.",
+      "observed": "다섯 쌍을 나란히 놓고 대조했다. first-play는 링과 지금, 얼어붙은 반동, 띠, 쐐기 세 개, 하단 가이드 세 줄까지 일치한다. verb-precise는 밝게 벌어진 균열과 보풀, 하늘로 튀는 나뭇가루, 링 옆 늦음 +18ms까지 일치한다. verb-success는 두 쪽으로 벌어진 통나무와 섬유 보풀이 일치한다. verb-fail은 쐐기꼴 파편으로 흩어진 통나무와 초과 수치, 부러진 쐐기가 일치한다. game-over는 얼어붙은 균열과 화살표와 거리 수치, 부러진 쐐기 세 개, 좌측 누적 장작더미, 다시 (R) 버튼이 일치한다. 갈리는 곳은 둘이다. 목표 화면이 회화적 사실 묘사인 데 비해 실제는 같은 구도를 평면 픽셀 표현으로 옮겼고, 목표 배경 좌우에 있던 장작 적재 더미가 실제에서는 침엽수 실루엣 띠와 좌하단의 작은 누적 더미로 대체되어 배경의 재료 밀도가 낮다. 반대로 실제 화면은 목표에 없던 등급 이름과 사다리를 더 갖고 있다.",
+      "status": "gap"
+    },
+    {
+      "id": "p21",
+      "source": "GDD.md#교정-신호",
+      "claim": "실패한 통나무는 멈춘 균열이 남긴 팁과 띠 사이 거리(예: 12% 초과)와 도달 밴드를 그대로 남긴다.",
+      "observed": "부족과 초과 모두 화살표와 함께 16% 부족 · 밴드 2, 0% 초과 · 밴드 1 형태로 남는다. 다만 반올림이 정수 퍼센트라 아슬아슬하게 띠를 넘긴 판이 0% 초과로 적힌다. 실제로 넘겼는데 넘지 않은 것처럼 읽히는 표기이며 교정 신호로서 그 경우에 방향을 흐린다.",
+      "status": "gap"
+    },
+    {
+      "id": "p22",
+      "source": "GDD.md#콘셉트",
+      "claim": "타깃 세션 길이는 약 90초, 통나무 14개, 5개 난이도 밴드다.",
+      "observed": "통나무 14개와 밴드 5단계는 그대로다. 세션 길이는 프로필에 따라 갈렸다. 직관은 통나무 7에서 10 사이에서 쐐기 세 개를 다 부러뜨리며 대략 40초에서 60초에 끝났고, 숙련은 통나무 10에서 13까지 갔으며, 정밀 조준 정책은 14개를 모두 지나 100초 안팎이었다. 90초는 잘하는 판의 길이이고 못하는 판은 그보다 짧다.",
+      "status": "met"
+    }
+  ],
+  "playObservations": [
+    {
+      "profile": "intuitive",
+      "runs": 3,
+      "completions": 0,
+      "note": "하네스 자체 점검을 먼저 했다. 지정 오차 표준편차 78ms에 대해 실측 75, 63, 70ms로 오차가 눌리지 않았음을 확인한 뒤 관측치를 판정에 썼다. 세 판 모두 쐐기 세 개를 전부 부러뜨리고 통나무 7, 10, 9에서 끝났으므로 실패 예산을 한 번도 쓰지 않고 완주하는 질 수 없음 상태가 아니다. 쪼갠 수는 4, 7, 6이고 등급은 물림과 정타가 주를 이루며 결에는 닿지 못했다. 첫 판 가이드가 가르치는 그대로 쳐서 핵심 판정을 판마다 수십 번 경험하고 실패 판정으로 끝났다."
+    },
+    {
+      "profile": "skilled",
+      "runs": 3,
+      "completions": 0,
+      "note": "실측 오차 표준편차 40, 46, 43ms로 직관의 절반 수준임을 확인했다. 쪼갠 수 10, 8, 7, 도달 통나무 13, 11, 10, 총점 10.5M, 8.5M, 7.5M로 직관(4.4M, 7.4M, 6.3M)과 점수와 등급 분포가 뚜렷이 갈린다. 세 판 모두 결 등급을 냈고 밴드 5까지 도달했다. 완주할 수 있는 난이도이며 직관과 구분된다."
+    },
+    {
+      "profile": "natural-gesture",
+      "runs": 3,
+      "completions": 0,
+      "note": "안내를 정독하지 않은 플레이어를 모사해 링을 보지 않고 230에서 410ms 사이 관성적 연타로 시작했고, 첫 실패 뒤에는 화면의 오차 교정 수치만 보고 조준으로 전환했다. 실측 오차 표준편차는 161, 222, 177ms다. 쪼갠 수 2, 0, 3으로 세 판 다 졌지만 회복 경로 없이 반복 즉사하지는 않았다. 두 판에서 교정 뒤 실제로 통나무를 쪼갰고 한 판은 결 등급까지 냈다. 한 판도 못 쪼갠 판도 세 통나무를 지나며 각각 탭 예산을 쓰고 끝났다. 이길 수 없음에 해당하지 않는다."
+    }
+  ],
+  "strategyLegibility": {
+    "winningStrategy": "매 탭을 반동 정점에 최대한 붙인다. 정타 이상이면 전진 배수가 1.0이고 균열 각도가 절반으로 펴져, 계획 탭 수만큼의 정확한 타격이 균열 팁을 띠 한가운데에 세운다.",
+    "taughtOnScreen": true,
+    "taughtBy": "첫 판 가이드의 그린 링이 열릴 때와 첫 통나무의 링 안 지금, 성공 창을 열고 닫으며 정타 창을 안쪽 호로 그리는 링 자체, 타격마다 이름으로 튀어나오는 등급과 빗나감·물림·정타·결 사다리, 항상 떠 있는 늦음 +51ms 교정 수치와 링 위에 남는 눈금, 칠해진 띠를 향해 눈에 보이게 전진하는 균열 팁, 그리고 실패 시 남는 16% 부족 · 밴드 2 거리 표시",
+    "learnedFrom": "screen"
+  },
+  "gradeLadder": {
+    "present": true,
+    "names": ["빗나감", "물림", "정타", "결"],
+    "lowestObserved": "빗나감",
+    "bestObserved": "결",
+    "shownDuringPlay": true,
+    "shownBy": "타격 순간 화면 중앙 상단에 등급 고유 색으로 튀어나오는 등급 이름과, 그 아래 해당 칸만 밝게 켜지는 빗나감·물림·정타·결 사다리. 영어 판에서는 같은 자리에 MISS·BITE·TRUE·GRAIN으로 나온다. 캡처한 프레임의 단계가 play임을 확인해 결과 화면 전용 표시가 아님을 검증했다."
+  },
+  "fatalGaps": [],
+  "summary": {
+    "ko": "빌드를 직접 구동해 실제 포인터와 키보드 이벤트로 세 프로필 아홉 판과 정책 대조 열두 판을 플레이했다. GDD가 약속한 게임과 실제로 플레이되는 게임은 같은 게임이다. 반동 정점에 쐐기를 박아 균열을 띠에 세우는 핵심 동사가 화면에 실재하고, 네 등급이 재료 반응의 종류로 갈려 한 장의 프레임만으로 재료가 어떻게 반응했는지와 어느 등급이었는지가 모두 답해진다. 등급은 결과 화면이 아니라 발동하는 순간 한국어와 영어 모두에서 이름으로 불리고 사다리가 함께 켜진다. 이기는 방법은 화면 안내가 가르치는 것과 같으며, 일부러 빗맞혀 전진을 아끼는 반대 전략이 우위인지 적대적으로 검사했으나 체계적 우위는 없었다. 치명적 결함은 없다. 남은 틈은 넷이다. 탭 예산이 화면에 그려지지 않아 부족 실패를 사후에만 알 수 있고, 결 창의 폭은 링에 표식이 없으며, 목표 화면 대비 배경의 재료 밀도가 낮고, 아슬아슬한 초과가 0% 초과로 반올림되어 넘지 않은 것처럼 읽힌다.",
+    "en": "The build was driven directly through real pointer and keyboard events for nine human-model runs across three profiles plus twelve policy-comparison runs. The game GDD.md promises and the game that actually gets played are the same game. The core verb is present on screen: the wedge goes in at the peak of the recoil and the crack walks the grain toward the painted band. The four grades differ in kind rather than in degree, so a single frame answers both how the material reacted and which grade fired. Grades are called by name at the moment they fire, in Korean and in English, with the ladder lit alongside, not merely counted on the result screen. The winning line is the one the on-screen guide teaches; a deliberately-miss depth policy was tested adversarially against it across twelve runs and showed no systematic advantage. There are no fatal gaps. Four gaps remain: the tap budget is never drawn, so a short failure is only knowable after the fact; the grain window has no marker on the ring; background material density is lower than in the target screens; and a narrow overshoot rounds to 0% over, which reads as not over at all."
+  }
+}

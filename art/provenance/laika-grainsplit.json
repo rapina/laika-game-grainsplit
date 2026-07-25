@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "laika-grainsplit",
+  "createdAt": "2026-07-19",
+  "generator": {
+    "tool": "OpenAI Codex built-in image_gen",
+    "useCase": "illustration-story",
+    "invocation": "codex exec --sandbox workspace-write --skip-git-repo-check -C art/source -i <laika-base.png> -",
+    "promptPath": "art/prompts/laika-grainsplit.md",
+    "referencePath": "brand/art/laika-base.png",
+    "referenceId": "laika-base-v1",
+    "referenceSha256": "820e6d43e915c4e9e32ddcd3cc14d0f2537d99f6d8d397bbd40fc416137a6712",
+    "referenceDelivery": "attached as an actual image file to the generation call, not described in text"
+  },
+  "source": {
+    "path": "art/source/laika-grainsplit.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "14402e41fba8738b4f6a641671074ad254fb1f9b1313e0232a017291a07b4e2c"
+  },
+  "postprocessing": "Pillow LANCZOS proportional resize and JPEG conversion; quality 88 for 640, quality 90 for 1280; no retouching, recolouring or compositing",
+  "webRenditions": [
+    {
+      "path": "public/art/laika-grainsplit-640.jpg",
+      "width": 640,
+      "height": 960,
+      "sha256": "a230d151f5ef494962bad62144bc2da336faf1e12fad983f01414fefda70af13"
+    },
+    {
+      "path": "public/art/laika-grainsplit-1280.jpg",
+      "width": 1280,
+      "height": 1920,
+      "sha256": "02bb0fb95192afd88a4e85c55b464d9b119e8cd166af8f23d413adb3ae8e3307"
+    }
+  ],
+  "qa": {
+    "faceIdentity": "pass: pointed ears, narrow white forehead blaze, dark eye patches and small mixed-breed muzzle carried over from the base without drift",
+    "harness": "pass: cream X harness with crossing chest straps and the oxidized-orange connector fitting seated at the chest",
+    "anatomy": "pass: natural four-legged canine skeleton, braced on the hind legs with both front paws pressed on the wedge head; four limbs total, paw pads and dewclaws read as paws; no humanoid hands, no extra limbs",
+    "action": "pass: exactly one tool and one action, an iron splitting wedge caught at the instant it is driven into the end face of one log; the crack runs down from the wedge along the grain with torn pale fibre lips and a few chips of wood dust; no axe, maul, hammer, second tool or chopping block",
+    "text": "pass: no generated text, logo, signature or fake documentary label; the panel carries only analog dial markings belonging to the base identity",
+    "palette": "pass: black, dirty white and oxidized orange screen-print palette; the sepia wood and cream fresh split face stay inside it; blue confined to Earth in the porthole",
+    "mobileCrop": "pass: a square card crop of the portrait keeps the ears, face, chest, harness, orange connector, both gripping paws, the full wedge and the cracked log end face in frame",
+    "gameBleed": "pass: capsule, porthole, Earth and this palette exist only in this public maker illustration; nothing here was carried back into the locked game UI, art or sound"
+  }
+}

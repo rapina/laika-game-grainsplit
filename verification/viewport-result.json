@@ -1,0 +1,109 @@
+{
+  "design": {
+    "w": 390,
+    "h": 844
+  },
+  "viewports": [
+    {
+      "name": "360x800",
+      "width": 360,
+      "height": 800,
+      "dpr": 3,
+      "bufferW": 1079,
+      "bufferH": 2335,
+      "cssW": 359.65625,
+      "cssH": 778.328125,
+      "devicePixelRatio": 3,
+      "canvasWidthOverCssWidth": 3.0001,
+      "canvasHeightOverCssHeight": 3,
+      "requiredRatio": 3,
+      "aspectRatioVsDesign": 1.00001,
+      "errors": [],
+      "checks": {
+        "dprWidthOk": true,
+        "dprHeightOk": true,
+        "uniformAspect": true,
+        "insideFrame": true,
+        "noPageOverflow": true,
+        "noErrors": true
+      },
+      "pass": true
+    },
+    {
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "dpr": 3,
+      "bufferW": 1169,
+      "bufferH": 2529,
+      "cssW": 389.65625,
+      "cssH": 843,
+      "devicePixelRatio": 3,
+      "canvasWidthOverCssWidth": 3.0001,
+      "canvasHeightOverCssHeight": 3,
+      "requiredRatio": 3,
+      "aspectRatioVsDesign": 1.0003,
+      "errors": [],
+      "checks": {
+        "dprWidthOk": true,
+        "dprHeightOk": true,
+        "uniformAspect": true,
+        "insideFrame": true,
+        "noPageOverflow": true,
+        "noErrors": true
+      },
+      "pass": true
+    },
+    {
+      "name": "430x932",
+      "width": 430,
+      "height": 932,
+      "dpr": 3,
+      "bufferW": 1289,
+      "bufferH": 2789,
+      "cssW": 429.65625,
+      "cssH": 929.65625,
+      "devicePixelRatio": 3,
+      "canvasWidthOverCssWidth": 3.0001,
+      "canvasHeightOverCssHeight": 3,
+      "requiredRatio": 3,
+      "aspectRatioVsDesign": 1.00018,
+      "errors": [],
+      "checks": {
+        "dprWidthOk": true,
+        "dprHeightOk": true,
+        "uniformAspect": true,
+        "insideFrame": true,
+        "noPageOverflow": true,
+        "noErrors": true
+      },
+      "pass": true
+    },
+    {
+      "name": "900x760-wide",
+      "width": 900,
+      "height": 760,
+      "dpr": 2,
+      "bufferW": 702,
+      "bufferH": 1518,
+      "cssW": 351,
+      "cssH": 759,
+      "devicePixelRatio": 2,
+      "canvasWidthOverCssWidth": 2,
+      "canvasHeightOverCssHeight": 2,
+      "requiredRatio": 2,
+      "aspectRatioVsDesign": 1.00079,
+      "errors": [],
+      "checks": {
+        "dprWidthOk": true,
+        "dprHeightOk": true,
+        "uniformAspect": true,
+        "insideFrame": true,
+        "noPageOverflow": true,
+        "noErrors": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}
